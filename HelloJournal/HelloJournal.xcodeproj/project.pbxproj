@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499574F825A01D900062150D /* HJJournalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499574F725A01D900062150D /* HJJournalDetailVC.swift */; };
+		499574FC25A166190062150D /* HJJournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499574FB25A166190062150D /* HJJournalTableViewController.swift */; };
+		499574FF25A166620062150D /* HJCreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499574FE25A166620062150D /* HJCreateJournalViewController.swift */; };
+		4995750225A166900062150D /* HJPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995750125A166900062150D /* HJPhotoCollectionViewController.swift */; };
 		4995BC0A2598C10B0046E4E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995BC092598C10B0046E4E5 /* AppDelegate.swift */; };
 		4995BC112598C10B0046E4E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4995BC0F2598C10B0046E4E5 /* Main.storyboard */; };
 		4995BC132598C10D0046E4E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995BC122598C10D0046E4E5 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		499574F725A01D900062150D /* HJJournalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJJournalDetailVC.swift; sourceTree = "<group>"; };
+		499574FB25A166190062150D /* HJJournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJJournalTableViewController.swift; sourceTree = "<group>"; };
+		499574FE25A166620062150D /* HJCreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCreateJournalViewController.swift; sourceTree = "<group>"; };
+		4995750125A166900062150D /* HJPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJPhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		4995BC062598C10B0046E4E5 /* HelloJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995BC092598C10B0046E4E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4995BC102598C10B0046E4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				4995BC092598C10B0046E4E5 /* AppDelegate.swift */,
+				4995750125A166900062150D /* HJPhotoCollectionViewController.swift */,
+				499574F725A01D900062150D /* HJJournalDetailVC.swift */,
+				499574FB25A166190062150D /* HJJournalTableViewController.swift */,
+				499574FE25A166620062150D /* HJCreateJournalViewController.swift */,
 				4995BC0F2598C10B0046E4E5 /* Main.storyboard */,
 				4995BC122598C10D0046E4E5 /* Assets.xcassets */,
 				4995BC142598C10D0046E4E5 /* LaunchScreen.storyboard */,
@@ -133,6 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4995BC0A2598C10B0046E4E5 /* AppDelegate.swift in Sources */,
+				4995750225A166900062150D /* HJPhotoCollectionViewController.swift in Sources */,
+				499574FC25A166190062150D /* HJJournalTableViewController.swift in Sources */,
+				499574FF25A166620062150D /* HJCreateJournalViewController.swift in Sources */,
+				499574F825A01D900062150D /* HJJournalDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
