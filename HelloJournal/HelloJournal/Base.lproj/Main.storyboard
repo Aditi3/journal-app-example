@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qdl-G6-ary">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="Dzq-Eh-27v" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nmf-Hp-NVQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DyB-B8-y0e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -28,9 +28,9 @@
         <!--Item-->
         <scene sceneID="pPN-EI-vVa">
             <objects>
-                <collectionViewController id="QLj-BR-NVc" sceneMemberID="viewController">
+                <collectionViewController id="QLj-BR-NVc" customClass="HJPhotoCollectionViewController" customModule="HelloJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QmR-4r-oNi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="snr-uq-y1N">
@@ -65,7 +65,7 @@
             <objects>
                 <navigationController id="xuv-Q1-dbv" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vNe-Of-Vi2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -98,17 +98,46 @@
         <!--Item-->
         <scene sceneID="HYe-TS-E0I">
             <objects>
-                <tableViewController id="J36-Nm-BC0" sceneMemberID="viewController">
+                <tableViewController id="J36-Nm-BC0" customClass="HJJournalTableViewController" customModule="HelloJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9uq-nD-471">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="MlO-Jj-hII">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-c7-hAX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RC-6E-Avh">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="137"/>
+                                            <state key="normal" image="camera"/>
+                                            <connections>
+                                                <segue destination="MzW-Qw-71A" kind="presentation" identifier="goToNew" modalPresentationStyle="fullScreen" id="ysG-Ib-4pJ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-Wu-PLe">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="137"/>
+                                            <state key="normal" image="add"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="9DI-c7-hAX" secondAttribute="trailing" id="ACB-i7-LNA"/>
+                                <constraint firstAttribute="bottom" secondItem="9DI-c7-hAX" secondAttribute="bottom" id="HK4-b6-xjQ"/>
+                                <constraint firstItem="9DI-c7-hAX" firstAttribute="leading" secondItem="MlO-Jj-hII" secondAttribute="leading" id="YXq-ub-gGj"/>
+                                <constraint firstItem="9DI-c7-hAX" firstAttribute="top" secondItem="MlO-Jj-hII" secondAttribute="top" id="t7k-i2-2C4"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1oW-l7-IxS">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1oW-l7-IxS" id="Iga-QO-xDI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -119,20 +148,40 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="Cju-Rm-UWx"/>
+                    <connections>
+                        <outlet property="addButton" destination="Rod-Wu-PLe" id="gn4-Ri-Qjt"/>
+                        <outlet property="cameraButton" destination="5RC-6E-Avh" id="Zbf-F5-qFB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSI-GV-iVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="-321"/>
+            <point key="canvasLocation" x="1686.9565217391305" y="-321.42857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Journal View Controller-->
         <scene sceneID="f0t-PY-6Fi">
             <objects>
-                <viewController id="MzW-Qw-71A" sceneMemberID="viewController">
+                <viewController id="MzW-Qw-71A" customClass="HJCreateJournalViewController" customModule="HelloJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oC5-78-zvW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuW-Zh-U56">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="oKa-xK-MKf">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="jQR-Rc-gdl"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="DUg-o5-cpW"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="duo-Cg-2hm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zuW-Zh-U56" firstAttribute="top" secondItem="duo-Cg-2hm" secondAttribute="top" id="Hqq-2s-OOi"/>
+                            <constraint firstItem="zuW-Zh-U56" firstAttribute="leading" secondItem="duo-Cg-2hm" secondAttribute="leading" id="coV-cS-LsQ"/>
+                            <constraint firstItem="zuW-Zh-U56" firstAttribute="trailing" secondItem="duo-Cg-2hm" secondAttribute="trailing" id="wfy-Hj-wE7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNe-xV-4Fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,8 +203,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="camera" width="85.333335876464844" height="85.333335876464844"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

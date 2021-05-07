@@ -9,6 +9,10 @@
 import UIKit
 
 class HJJournalTableViewController: UITableViewController {
+    
+    @IBOutlet weak var topHeaderView: UIView!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,16 @@ class HJJournalTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    // MARK: - Actions
+
+    @IBAction func cameraTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToNew", sender: "camera")
+    }
+    
+    @IBAction func plusTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToNew", sender: nil)
     }
 
     // MARK: - Table view data source
